@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cic7i7x8bsqd4"]
+[gd_scene load_steps=3 format=3 uid="uid://cic7i7x8bsqd4"]
+
+[ext_resource type="Texture2D" uid="uid://b5qpj1qshjts6" path="res://assets/FlappyDisk.png" id="1_4a7p5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iye"]
 
@@ -6,3 +8,6 @@
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_m3iye")
+
+[node name="FlappyDisk" type="Sprite2D" parent="."]
+texture = ExtResource("1_4a7p5")
