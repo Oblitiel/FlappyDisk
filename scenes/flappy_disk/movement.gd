@@ -5,9 +5,6 @@ extends Node
 @export var jump_force : int = 300
 @export var max_fall_velocity : int = 1000
 
-func move() -> void:
-	flappy_disk.move_and_slide()
-
 func fall(delta: float) -> void:
 	flappy_disk.velocity = flappy_disk.velocity.move_toward(get_fall_vector(), delta * get_fall_acceleration())
 
