@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FlappyDisk"
-run/main_scene="uid://dmffvcp46qm84"
+run/main_scene="uid://c5r12eiuicmwe"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5r12eiuicmwe"]
+
+[ext_resource type="Script" uid="uid://cyp4cxq4pd8mp" path="res://scenes/game_controller/game_controller.gd" id="1_420aq"]
+[ext_resource type="PackedScene" uid="uid://dmffvcp46qm84" path="res://scenes/levels/main_level.tscn" id="1_hiwhh"]
+[ext_resource type="Script" uid="uid://7ra8pklsr60m" path="res://scenes/game_controller/level_manager.gd" id="2_gupwa"]
+[ext_resource type="PackedScene" uid="uid://cic7i7x8bsqd4" path="res://scenes/flappy_disk/flappy_disk.tscn" id="3_c3f1a"]
+
+[node name="GameController" type="Node"]
+script = ExtResource("1_420aq")
+
+[node name="LevelManager" type="Node2D" parent="." node_paths=PackedStringArray("current_level")]
+script = ExtResource("2_gupwa")
+current_level = NodePath("MainLevel")
+
+[node name="MainLevel" parent="LevelManager" instance=ExtResource("1_hiwhh")]
+
+[node name="PlayerCharacterManager" type="Node2D" parent="."]
+
+[node name="FlappyDisk" parent="PlayerCharacterManager" instance=ExtResource("3_c3f1a")]
+
+[node name="UiManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

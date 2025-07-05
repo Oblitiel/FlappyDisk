@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmffvcp46qm84"]
 
-[ext_resource type="PackedScene" uid="uid://cic7i7x8bsqd4" path="res://scenes/flappy_disk/flappy_disk.tscn" id="1_ufxs0"]
+[ext_resource type="Script" uid="uid://betxp7lhsr7r0" path="res://nodes/level.gd" id="1_ojqrr"]
 [ext_resource type="Texture2D" uid="uid://cfnu7rsw1mg1o" path="res://assets/ObstaclePC.png" id="2_6we3w"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ufxs0"]
 
 [node name="MainLevel" type="Node2D"]
-
-[node name="FlappyDisk" parent="." instance=ExtResource("1_ufxs0")]
+script = ExtResource("1_ojqrr")
+metadata/_custom_type_script = "uid://betxp7lhsr7r0"
 
 [node name="ObstaclePc" type="Sprite2D" parent="."]
 position = Vector2(-25, 21)
