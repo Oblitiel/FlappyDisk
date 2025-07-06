@@ -10,15 +10,13 @@
 [node name="GameController" type="Node"]
 script = ExtResource("1_420aq")
 
-[node name="LevelManager" type="Node2D" parent="." node_paths=PackedStringArray("current_level")]
+[node name="LevelManager" type="Node2D" parent="."]
 script = ExtResource("2_gupwa")
-current_level = NodePath("MainLevel")
 
 [node name="MainLevel" parent="LevelManager" instance=ExtResource("1_hiwhh")]
 
-[node name="PlayerCharacterManager" type="Node2D" parent="." node_paths=PackedStringArray("current_character")]
+[node name="PlayerCharacterManager" type="Node2D" parent="."]
 script = ExtResource("4_giy5l")
-current_character = NodePath("FlappyDisk")
 
 [node name="FlappyInputHandler" type="Node" parent="PlayerCharacterManager" node_paths=PackedStringArray("controled_character")]
 script = ExtResource("5_c4mfo")

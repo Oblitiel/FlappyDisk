@@ -2,17 +2,22 @@ extends Node2D
 
 const CHARACTER_PATH_FORMAT = "res://scenes/%s/%s.tscn"
 
-@export var current_character : FlappyCharacter
+@export var _current_character : FlappyCharacter
 
-func change_character(new_character: String, delete: bool = true, keep_running : bool = false):
+func change_character(new_character: String, delete: bool = true, keep_running : bool = false) -> FlappyCharacter:
 	if delete:
-		if current_character:
-			current_character.queue_free()
+		if _current_character:
+			_current_character.queue_free()
 	elif keep_running:
-		current_character.hide()
+		_current_character.hide()
 	else:
-		remove_child(current_character)
+		remove_child(_current_character)
 	
 	var new = load(CHARACTER_PATH_FORMAT % [new_character,new_character]).instantiate()
 	add_child(new)
-	current_character = new
+	_current_character = new
+	
+	return get_current_character()
+
+func get_current_character() -> FlappyCharacter:
+	return _current_character
