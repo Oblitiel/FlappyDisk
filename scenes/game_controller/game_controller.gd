@@ -8,8 +8,11 @@ static var instance : GameController
 @onready var _ui_manager = $UiManager
 
 
-func _ready():
+func _init():
 	instance = self
 
 func change_level(new_level: String, delete: bool = true, keep_running : bool = false):
 	_level_manager.change_level(new_level, delete, keep_running)
+
+func change_character(new_character: String, delete: bool = true, keep_running : bool = false):
+	_player_character_manager.change_character(new_character, delete, keep_running)

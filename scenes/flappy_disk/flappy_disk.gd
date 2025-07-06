@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends FlappyCharacter
 
 @onready var movement: Node = $Movement
 

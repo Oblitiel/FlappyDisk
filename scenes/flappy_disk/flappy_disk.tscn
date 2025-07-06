@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cic7i7x8bsqd4"]
+[gd_scene load_steps=5 format=3 uid="uid://cic7i7x8bsqd4"]
 
 [ext_resource type="Script" uid="uid://n6857vhxvypy" path="res://scenes/flappy_disk/flappy_disk.gd" id="1_y1v7f"]
 [ext_resource type="Texture2D" uid="uid://b5qpj1qshjts6" path="res://assets/FlappyDisk.png" id="2_b7fpd"]
 [ext_resource type="Script" uid="uid://cd5e1vabmu2aa" path="res://scenes/flappy_disk/movement.gd" id="4_b7fpd"]
-[ext_resource type="Script" uid="uid://b42oq4kc5plsm" path="res://nodes/flappy_input_handler.gd" id="4_e1voq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3iye"]
 size = Vector2(12, 12)
@@ -19,7 +18,3 @@ shape = SubResource("RectangleShape2D_m3iye")
 
 [node name="Movement" type="Node" parent="."]
 script = ExtResource("4_b7fpd")
-
-[node name="InputHandler" type="Node" parent="." node_paths=PackedStringArray("controled_character")]
-script = ExtResource("4_e1voq")
-controled_character = NodePath("..")

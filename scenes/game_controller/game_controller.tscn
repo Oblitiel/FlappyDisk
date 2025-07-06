@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5r12eiuicmwe"]
+[gd_scene load_steps=7 format=3 uid="uid://c5r12eiuicmwe"]
 
 [ext_resource type="Script" uid="uid://cyp4cxq4pd8mp" path="res://scenes/game_controller/game_controller.gd" id="1_420aq"]
 [ext_resource type="PackedScene" uid="uid://dmffvcp46qm84" path="res://scenes/levels/main_level.tscn" id="1_hiwhh"]
 [ext_resource type="Script" uid="uid://7ra8pklsr60m" path="res://scenes/game_controller/level_manager.gd" id="2_gupwa"]
 [ext_resource type="PackedScene" uid="uid://cic7i7x8bsqd4" path="res://scenes/flappy_disk/flappy_disk.tscn" id="3_c3f1a"]
+[ext_resource type="Script" uid="uid://dthp2ocotlhmg" path="res://scenes/game_controller/player_character_manager.gd" id="4_giy5l"]
+[ext_resource type="Script" uid="uid://b42oq4kc5plsm" path="res://nodes/flappy_input_handler.gd" id="5_c4mfo"]
 
 [node name="GameController" type="Node"]
 script = ExtResource("1_420aq")
@@ -14,7 +16,14 @@ current_level = NodePath("MainLevel")
 
 [node name="MainLevel" parent="LevelManager" instance=ExtResource("1_hiwhh")]
 
-[node name="PlayerCharacterManager" type="Node2D" parent="."]
+[node name="PlayerCharacterManager" type="Node2D" parent="." node_paths=PackedStringArray("current_character")]
+script = ExtResource("4_giy5l")
+current_character = NodePath("FlappyDisk")
+
+[node name="FlappyInputHandler" type="Node" parent="PlayerCharacterManager" node_paths=PackedStringArray("controled_character")]
+script = ExtResource("5_c4mfo")
+controled_character = NodePath("../FlappyDisk")
+metadata/_custom_type_script = "uid://b42oq4kc5plsm"
 
 [node name="FlappyDisk" parent="PlayerCharacterManager" instance=ExtResource("3_c3f1a")]
 
