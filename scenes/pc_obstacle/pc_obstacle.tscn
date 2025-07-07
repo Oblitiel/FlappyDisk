@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx1qeiv1mwipn"]
+
+[ext_resource type="Script" uid="uid://cblbt7sfjd66c" path="res://scenes/pc_obstacle/pc_obstacle.gd" id="1_0v3s5"]
+[ext_resource type="Texture2D" uid="uid://cfnu7rsw1mg1o" path="res://assets/ObstaclePC.png" id="2_5np23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibfbq"]
+size = Vector2(32, 43)
+
+[node name="PcObstacle" type="Area2D"]
+script = ExtResource("1_0v3s5")
+metadata/_custom_type_script = "uid://cmogep7t2323g"
+
+[node name="ObstaclePc" type="Sprite2D" parent="."]
+texture = ExtResource("2_5np23")
+offset = Vector2(0, -21.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -21.5)
+shape = SubResource("RectangleShape2D_ibfbq")
+debug_color = Color(0.990423, 0, 0.278516, 0.42)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.07288e-06, -22.5)
+scale = Vector2(1.8, 2.25)
