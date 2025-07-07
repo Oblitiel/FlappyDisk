@@ -1,4 +1,3 @@
-class_name FlappyInputHandler
 extends Node
 
 @export var controled_character : FlappyCharacter

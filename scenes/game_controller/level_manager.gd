@@ -3,6 +3,10 @@ extends Node2D
 @export var _current_level : Level
 const SCENE_PATH_FORMAT = "res://scenes/levels/%s.tscn"
 
+func _ready():
+	if not _current_level:
+		
+
 func change_level(new_level: String, delete: bool = true, keep_running : bool = false) -> Level:
 	if delete:
 		if _current_level:
