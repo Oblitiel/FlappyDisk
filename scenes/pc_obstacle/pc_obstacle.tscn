@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx1qeiv1mwipn"]
 
-[ext_resource type="Script" uid="uid://cblbt7sfjd66c" path="res://scenes/pc_obstacle/pc_obstacle.gd" id="1_0v3s5"]
+[ext_resource type="Script" uid="uid://cblbt7sfjd66c" path="res://nodes/movable_obstacle.gd" id="1_0v3s5"]
 [ext_resource type="Texture2D" uid="uid://cfnu7rsw1mg1o" path="res://assets/ObstaclePC.png" id="2_5np23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibfbq"]
@@ -8,7 +8,7 @@ size = Vector2(32, 43)
 
 [node name="PcObstacle" type="Area2D"]
 script = ExtResource("1_0v3s5")
-metadata/_custom_type_script = "uid://cmogep7t2323g"
+metadata/_custom_type_script = "uid://cblbt7sfjd66c"
 
 [node name="ObstaclePc" type="Sprite2D" parent="."]
 texture = ExtResource("2_5np23")
