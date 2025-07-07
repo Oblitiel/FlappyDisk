@@ -18,4 +18,5 @@ func change_character(new_character: String, delete: bool = true, keep_running :
 	_player_character_manager.change_character(new_character, delete, keep_running)
 
 func on_player_obstacle_colision():
+	print("Player colided with obstacle")
 	pass
