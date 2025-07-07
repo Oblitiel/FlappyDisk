@@ -1,11 +1,19 @@
 extends Node2D
 
-@export var _current_level : Level
+var _current_level : Level
 const SCENE_PATH_FORMAT = "res://scenes/levels/%s.tscn"
 
 func _ready():
-	if not _current_level:
-		
+	_current_level = _find_current_level()
+
+func _find_current_level() -> Level:
+	for child in get_children():
+		if child is Level:
+			return child
+		for child_of_child in child.get_children():
+			if child is Level:
+				return child
+	return null
 
 func change_level(new_level: String, delete: bool = true, keep_running : bool = false) -> Level:
 	if delete:
