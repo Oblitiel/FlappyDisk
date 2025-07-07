@@ -16,3 +16,6 @@ func change_level(new_level: String, delete: bool = true, keep_running : bool = 
 
 func change_character(new_character: String, delete: bool = true, keep_running : bool = false):
 	_player_character_manager.change_character(new_character, delete, keep_running)
+
+func on_player_obstacle_colision():
+	pass
