@@ -8,7 +8,7 @@ size = Vector2(32, 43)
 
 [node name="PcObstacle" type="Area2D"]
 script = ExtResource("1_0v3s5")
-initial_velocity = Vector2(-16, 0)
+initial_velocity = Vector2(-100, 0)
 metadata/_custom_type_script = "uid://cblbt7sfjd66c"
 
 [node name="ObstaclePc" type="Sprite2D" parent="."]
@@ -23,3 +23,6 @@ debug_color = Color(0.990423, 0, 0.278516, 0.42)
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-1.07288e-06, -22.5)
 scale = Vector2(1.8, 2.25)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

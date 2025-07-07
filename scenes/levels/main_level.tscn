@@ -25,4 +25,4 @@ position = Vector2(0, -16)
 shape = SubResource("WorldBoundaryShape2D_ufxs0")
 
 [node name="PcObstacle" parent="." instance=ExtResource("4_hn3as")]
-position = Vector2(37, 64)
+position = Vector2(162, 81)
