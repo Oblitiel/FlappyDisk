@@ -5,6 +5,7 @@ signal screen_exited()
 @export var initial_velocity : Vector2 = Vector2()
 
 func _ready():
+	super()
 	velocity = initial_velocity
 
 func _physics_process(delta):
