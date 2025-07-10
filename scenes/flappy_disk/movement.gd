@@ -2,7 +2,7 @@ extends Node
 
 @export var flappy_disk : FlappyCharacter
 
-@export var jump_force : int = 300
+@export var jump_force : int = 180
 @export var max_fall_velocity : int = 1000
 
 func fall(delta: float) -> void:

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cydqmv7ek456x"]
+
+[ext_resource type="Script" uid="uid://ckqtbvvh8qxn1" path="res://scenes/file_obstacle/file_obstacle.gd" id="1_j7vv5"]
+[ext_resource type="Texture2D" uid="uid://dky56c0cbod5y" path="res://assets/ObstacleFile.png" id="2_jve44"]
+[ext_resource type="Script" uid="uid://b8ywv1xibphsg" path="res://nodes/score_area.gd" id="3_j7vv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jve44"]
+size = Vector2(28, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7vv5"]
+size = Vector2(28, 126)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_ex8kw"]
+length = 50.0
+
+[node name="MovableObstacle" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_j7vv5")
+metadata/_custom_type_script = "uid://37g7mqpfast0"
+
+[node name="ObstacleFileTop" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, -90)
+shape = SubResource("RectangleShape2D_jve44")
+
+[node name="Sprite" type="Sprite2D" parent="ObstacleFileTop"]
+z_index = -1
+position = Vector2(0, 65)
+texture = ExtResource("2_jve44")
+offset = Vector2(0, -64)
+
+[node name="ObstacleFileBtm" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 90)
+shape = SubResource("RectangleShape2D_j7vv5")
+
+[node name="Sprite2" type="Sprite2D" parent="ObstacleFileBtm"]
+z_index = -1
+position = Vector2(0, -65)
+texture = ExtResource("2_jve44")
+offset = Vector2(0, 64)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-2.38419e-07, 2.38419e-07)
+scale = Vector2(1.6, 0.1)
+
+[node name="ScoreArea" type="Area2D" parent="."]
+script = ExtResource("3_j7vv5")
+metadata/_custom_type_script = "uid://b8ywv1xibphsg"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea"]
+position = Vector2(0, -25)
+shape = SubResource("SeparationRayShape2D_ex8kw")
