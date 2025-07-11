@@ -10,13 +10,22 @@ const FILE_OBSTACLE = preload("res://scenes/file_obstacle/file_obstacle.tscn")
 var wait_time : float :
 	set = set_wait_time
 var timer : Timer
+var pool : Array[Obstacle]
 
 func _ready():
 	wait_time = timer.wait_time
+	pool = spawn_pool(pool_size)
+	print(pool.size())
 
-func spawn_obstacle() -> Obstacle:
+func spawn_pool(size : int) -> Array[Obstacle]:
+	var new_pool : Array[Obstacle]
+	while size > 0:
+		new_pool.append(create_obstacle())
+		--size
+	return new_pool
+
+func create_obstacle() -> Obstacle:
 	var obstacle = FILE_OBSTACLE.instantiate()
-	add_child(obstacle)
 	return obstacle
 
 func set_wait_time(new_time) -> void:
@@ -24,4 +33,4 @@ func set_wait_time(new_time) -> void:
 	timer.wait_time = wait_time
 
 func _on_timer_timeout() -> void:
-	spawn_obstacle()
+	pass
