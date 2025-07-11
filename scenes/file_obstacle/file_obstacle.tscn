@@ -14,6 +14,7 @@ size = Vector2(28, 126)
 length = 50.0
 
 [node name="MovableObstacle" type="Area2D"]
+z_index = 10
 collision_layer = 2
 script = ExtResource("1_j7vv5")
 metadata/_custom_type_script = "uid://37g7mqpfast0"
@@ -41,10 +42,14 @@ texture = ExtResource("2_jve44")
 offset = Vector2(0, 64)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-2.38419e-07, 2.38419e-07)
-scale = Vector2(1.6, 0.1)
+position = Vector2(-5.68434e-14, -1.5974e-05)
+scale = Vector2(1.6, 15.3)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, -25)
 
 [node name="ScoreArea" type="Area2D" parent="."]
+visible = false
 script = ExtResource("3_j7vv5")
 metadata/_custom_type_script = "uid://b8ywv1xibphsg"
 

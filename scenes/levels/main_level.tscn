@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://dmffvcp46qm84"]
+[gd_scene load_steps=11 format=4 uid="uid://dmffvcp46qm84"]
 
 [ext_resource type="Script" uid="uid://betxp7lhsr7r0" path="res://nodes/level.gd" id="1_ojqrr"]
 [ext_resource type="Texture2D" uid="uid://cknf6ss8iwtxb" path="res://assets/BackGround.png" id="2_fke1l"]
-[ext_resource type="PackedScene" uid="uid://cydqmv7ek456x" path="res://scenes/file_obstacle/file_obstacle.tscn" id="2_ojqrr"]
+[ext_resource type="Script" uid="uid://dtv45g63ywxfn" path="res://nodes/obstacle.gd" id="3_hn3as"]
+[ext_resource type="PackedScene" uid="uid://pi56h0nn43bn" path="res://scenes/obstacle_manager/obstacle_manager.tscn" id="4_hn3as"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn3as"]
 texture = ExtResource("2_fke1l")
@@ -62,20 +63,21 @@ tile_set = SubResource("TileSet_geiq8")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(0, 81)
+[node name="Floor" type="Area2D" parent="."]
+position = Vector2(0, 87)
 collision_layer = 2
 collision_mask = 0
+script = ExtResource("3_hn3as")
+metadata/_custom_type_script = "uid://dtv45g63ywxfn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(0, -16)
 shape = SubResource("WorldBoundaryShape2D_ufxs0")
-
-[node name="MovableObstacle" parent="." instance=ExtResource("2_ojqrr")]
-position = Vector2(133, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_geiq8")
 }
 autoplay = "BG_move"
+
+[node name="ObstacleManager" parent="." instance=ExtResource("4_hn3as")]
+position = Vector2(193, 0)

@@ -2,11 +2,13 @@ extends MovableObstacle
 
 signal screen_exited()
 
-@export var initial_velocity : Vector2 = Vector2(-100,0)
+@export var initial_velocity : float = 100
+@export var direction : Vector2 = Vector2(-1,0)
 
 func _ready():
 	super()
-	velocity = initial_velocity
+	if not velocity:
+		velocity = initial_velocity * direction
 
 func _physics_process(delta):
 	move(delta)
