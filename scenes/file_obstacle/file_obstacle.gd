@@ -1,6 +1,6 @@
 extends MovableObstacle
 
-signal screen_exited()
+signal screen_exited(obstacle : Obstacle)
 
 @export var initial_velocity : float = 100
 @export var direction : Vector2 = Vector2(-1,0)
@@ -14,4 +14,4 @@ func _physics_process(delta):
 	move(delta)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	screen_exited.emit()
+	screen_exited.emit(self)
