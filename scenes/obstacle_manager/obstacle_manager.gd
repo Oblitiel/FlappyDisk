@@ -38,6 +38,11 @@ func spawn_obstacle():
 	
 	pool.append(obstacle)
 
+func stop_obstacles():
+	timer.paused = true
+	for obstacle in pool:
+		obstacle.velocity = Vector2(0,0)
+
 func set_wait_time(new_time) -> void:
 	wait_time = new_time
 	timer.wait_time = wait_time
