@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckqtbvvh8qxn1" path="res://scenes/file_obstacle/file_obstacle.gd" id="1_j7vv5"]
 [ext_resource type="Texture2D" uid="uid://dky56c0cbod5y" path="res://assets/ObstacleFile.png" id="2_jve44"]
-[ext_resource type="Script" uid="uid://b8ywv1xibphsg" path="res://nodes/score_area.gd" id="3_j7vv5"]
+[ext_resource type="Script" uid="uid://c1iv6qgypi56r" path="res://scenes/file_obstacle/score_area.gd" id="3_j7vv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jve44"]
 size = Vector2(28, 126)
@@ -45,11 +45,7 @@ offset = Vector2(0, 64)
 position = Vector2(1.93715e-06, -1.5974e-05)
 scale = Vector2(1.6, 15.3)
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, -25)
-
 [node name="ScoreArea" type="Area2D" parent="."]
-visible = false
 script = ExtResource("3_j7vv5")
 metadata/_custom_type_script = "uid://b8ywv1xibphsg"
 
