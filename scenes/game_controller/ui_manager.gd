@@ -4,3 +4,6 @@ extends CanvasLayer
 
 func add_score(points : int = 1) -> void:
 	score_ui.add_score(points)
+
+func reset_score() -> void:
+	score_ui.reset_score()

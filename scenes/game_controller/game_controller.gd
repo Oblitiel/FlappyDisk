@@ -3,8 +3,8 @@ extends Node
 
 static var instance : GameController
 
-@onready var _level_manager = $LevelManager
-@onready var _player_character_manager = $PlayerCharacterManager
+@onready var _level_manager: Node2D = $Pausable/LevelManager
+@onready var _player_character_manager: Node2D = $Pausable/PlayerCharacterManager
 @onready var _ui_manager = $UiManager
 @onready var pause_manager: Node = $PauseManager
 
@@ -20,6 +20,9 @@ func change_character(new_character: String, delete: bool = true, keep_running :
 
 func player_obstacle_collision():
 	pause_game()
+	change_level("main_level")
+	change_character("flappy_disk")
+	_ui_manager.reset_score()
 
 func add_score(points : int = 1):
 	_ui_manager.add_score(points)
