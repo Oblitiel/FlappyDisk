@@ -25,7 +25,7 @@ func change_level(new_level: String, delete: bool = true, keep_running : bool = 
 		remove_child(_current_level)
 	
 	var new = load(SCENE_PATH_FORMAT % new_level).instantiate()
-	add_child(new)
+	call_deferred("add_child", new)
 	_current_level = new
 	
 	return get_current_level()

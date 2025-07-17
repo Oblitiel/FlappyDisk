@@ -26,7 +26,7 @@ func change_character(new_character: String, delete: bool = true, keep_running :
 		remove_child(_current_character)
 	
 	var new = load(CHARACTER_PATH_FORMAT % [new_character,new_character]).instantiate()
-	add_child(new)
+	call_deferred("add_child", new)
 	_current_character = new
 	
 	return get_current_character()
