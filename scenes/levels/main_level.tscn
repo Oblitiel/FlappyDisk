@@ -1,17 +1,17 @@
 [gd_scene load_steps=12 format=4 uid="uid://dmffvcp46qm84"]
 
 [ext_resource type="Script" uid="uid://betxp7lhsr7r0" path="res://nodes/level.gd" id="1_ojqrr"]
-[ext_resource type="Texture2D" uid="uid://cknf6ss8iwtxb" path="res://assets/BackGround.png" id="2_fke1l"]
-[ext_resource type="Texture2D" uid="uid://cd8ogybb0l661" path="res://assets/BgExp.png" id="2_geiq8"]
+[ext_resource type="Texture2D" uid="uid://cknf6ss8iwtxb" path="res://resources/textures/BackGround.png" id="2_fke1l"]
+[ext_resource type="Texture2D" uid="uid://cd8ogybb0l661" path="res://resources/textures/BgExp.png" id="2_geiq8"]
 [ext_resource type="Script" uid="uid://dtv45g63ywxfn" path="res://nodes/obstacle.gd" id="3_hn3as"]
 [ext_resource type="PackedScene" uid="uid://pi56h0nn43bn" path="res://scenes/obstacle_manager/obstacle_manager.tscn" id="4_hn3as"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn3as"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_geiq8"]
 texture = ExtResource("2_fke1l")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_geiq8"]
-sources/0 = SubResource("TileSetAtlasSource_hn3as")
+sources/0 = SubResource("TileSetAtlasSource_geiq8")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ufxs0"]
 

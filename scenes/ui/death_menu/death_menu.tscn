@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1xhvexpi512s"]
+
+[ext_resource type="Theme" uid="uid://ceho1oxfb5nmd" path="res://resources/themes/main_menu.tres" id="1_lumx3"]
+[ext_resource type="Script" uid="uid://bindnygi8rhg" path="res://scenes/ui/death_menu/death_menu.gd" id="1_uqrr2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k5twr"]
+font_size = 64
+outline_size = 32
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Death Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lumx3")
+script = ExtResource("1_uqrr2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -46.0
+offset_right = 258.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "You got %d point"
+label_settings = SubResource("LabelSettings_k5twr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Reset" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Try Again"
+
+[node name="Exit" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

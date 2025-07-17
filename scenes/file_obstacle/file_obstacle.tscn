@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cydqmv7ek456x"]
 
 [ext_resource type="Script" uid="uid://ckqtbvvh8qxn1" path="res://scenes/file_obstacle/file_obstacle.gd" id="1_j7vv5"]
-[ext_resource type="Texture2D" uid="uid://dky56c0cbod5y" path="res://assets/ObstacleFile.png" id="2_jve44"]
+[ext_resource type="Texture2D" uid="uid://dky56c0cbod5y" path="res://resources/textures/ObstacleFile.png" id="2_jve44"]
 [ext_resource type="Script" uid="uid://c1iv6qgypi56r" path="res://scenes/file_obstacle/score_area.gd" id="3_j7vv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jve44"]

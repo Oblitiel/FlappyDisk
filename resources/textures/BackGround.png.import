@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfnu7rsw1mg1o"
-path="res://.godot/imported/ObstaclePC.png-b9c1e49395c13540b122d244580871ca.ctex"
+uid="uid://cknf6ss8iwtxb"
+path="res://.godot/imported/BackGround.png-12feb7942faab94b33123fccd2475f38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ObstaclePC.png"
-dest_files=["res://.godot/imported/ObstaclePC.png-b9c1e49395c13540b122d244580871ca.ctex"]
+source_file="res://resources/textures/BackGround.png"
+dest_files=["res://.godot/imported/BackGround.png-12feb7942faab94b33123fccd2475f38.ctex"]
 
 [params]
 

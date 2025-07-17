@@ -1,6 +1,6 @@
 extends Node
 
-@export var flappy_disk : FlappyCharacter
+@onready var flappy_disk: CharacterBody2D = $".."
 
 @export var jump_force : int = 180
 @export var max_fall_velocity : int = 360
