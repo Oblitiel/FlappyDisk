@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5r12eiuicmwe"]
+[gd_scene load_steps=9 format=3 uid="uid://c5r12eiuicmwe"]
 
 [ext_resource type="Script" uid="uid://cyp4cxq4pd8mp" path="res://scenes/game_controller/game_controller.gd" id="1_420aq"]
 [ext_resource type="PackedScene" uid="uid://dmffvcp46qm84" path="res://scenes/levels/main_level.tscn" id="1_hiwhh"]
@@ -7,21 +7,29 @@
 [ext_resource type="Script" uid="uid://dthp2ocotlhmg" path="res://scenes/game_controller/player_character_manager.gd" id="4_giy5l"]
 [ext_resource type="Script" uid="uid://bnnt1xk23lgje" path="res://scenes/game_controller/ui_manager.gd" id="6_c4mfo"]
 [ext_resource type="PackedScene" uid="uid://bb0c0pf52ia57" path="res://scenes/ui/score/score_ui.tscn" id="7_mras5"]
+[ext_resource type="Script" uid="uid://cr2754hyh6i2u" path="res://scenes/game_controller/pause_manager.gd" id="8_mras5"]
 
 [node name="GameController" type="Node"]
+process_mode = 3
 script = ExtResource("1_420aq")
 
-[node name="LevelManager" type="Node2D" parent="."]
+[node name="Pausable" type="Node" parent="."]
+process_mode = 1
+
+[node name="LevelManager" type="Node2D" parent="Pausable"]
 script = ExtResource("2_gupwa")
 
-[node name="MainLevel" parent="LevelManager" instance=ExtResource("1_hiwhh")]
+[node name="MainLevel" parent="Pausable/LevelManager" instance=ExtResource("1_hiwhh")]
 
-[node name="PlayerCharacterManager" type="Node2D" parent="."]
+[node name="PlayerCharacterManager" type="Node2D" parent="Pausable"]
 script = ExtResource("4_giy5l")
 
-[node name="FlappyDisk" parent="PlayerCharacterManager" instance=ExtResource("3_c3f1a")]
+[node name="FlappyDisk" parent="Pausable/PlayerCharacterManager" instance=ExtResource("3_c3f1a")]
 
 [node name="UiManager" type="CanvasLayer" parent="."]
 script = ExtResource("6_c4mfo")
 
 [node name="Score UI" parent="UiManager" instance=ExtResource("7_mras5")]
+
+[node name="PauseManager" type="Node" parent="."]
+script = ExtResource("8_mras5")

@@ -6,6 +6,7 @@ static var instance : GameController
 @onready var _level_manager = $LevelManager
 @onready var _player_character_manager = $PlayerCharacterManager
 @onready var _ui_manager = $UiManager
+@onready var pause_manager: Node = $PauseManager
 
 
 func _init():
@@ -22,3 +23,12 @@ func player_obstacle_collision():
 
 func add_score(points : int = 1):
 	_ui_manager.add_score(points)
+
+func pause_game() -> void:
+	pause_manager.pause_game()
+
+func resume_game() -> void:
+	pause_manager.resume_game()
+
+func is_game_paused() -> bool:
+	return pause_manager.is_game_paused
