@@ -19,7 +19,7 @@ func change_character(new_character: String, delete: bool = true, keep_running :
 	_player_character_manager.change_character(new_character, delete, keep_running)
 
 func player_obstacle_collision():
-	pass
+	pause_game()
 
 func add_score(points : int = 1):
 	_ui_manager.add_score(points)
