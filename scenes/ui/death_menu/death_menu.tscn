@@ -1,39 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1xhvexpi512s"]
+[gd_scene load_steps=4 format=3 uid="uid://c1xhvexpi512s"]
 
+[ext_resource type="Theme" uid="uid://ceho1oxfb5nmd" path="res://resources/themes/main_menu.tres" id="1_lumx3"]
 [ext_resource type="Script" uid="uid://bindnygi8rhg" path="res://scenes/ui/death_menu/death_menu.gd" id="1_uqrr2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqrr2"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumx3"]
-bg_color = Color(0.102975, 0.411747, 0.134184, 1)
-border_color = Color(0.0665677, 0.235242, 0.0796778, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5twr"]
-bg_color = Color(0.250316, 0.771546, 0.203106, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37fck"]
-bg_color = Color(0.0737505, 0.119835, 0.0733152, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="Theme" id="Theme_k5twr"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 32
-Button/styles/focus = SubResource("StyleBoxFlat_uqrr2")
-Button/styles/hover = SubResource("StyleBoxFlat_lumx3")
-Button/styles/normal = SubResource("StyleBoxFlat_k5twr")
-Button/styles/pressed = SubResource("StyleBoxFlat_37fck")
 
 [sub_resource type="LabelSettings" id="LabelSettings_k5twr"]
 font_size = 64
@@ -47,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_k5twr")
+theme = ExtResource("1_lumx3")
 script = ExtResource("1_uqrr2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5r12eiuicmwe"]
+[gd_scene load_steps=11 format=3 uid="uid://c5r12eiuicmwe"]
 
 [ext_resource type="Script" uid="uid://cyp4cxq4pd8mp" path="res://scenes/game_controller/game_controller.gd" id="1_420aq"]
 [ext_resource type="PackedScene" uid="uid://dmffvcp46qm84" path="res://scenes/levels/main_level.tscn" id="1_hiwhh"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bb0c0pf52ia57" path="res://scenes/ui/score/score_ui.tscn" id="7_mras5"]
 [ext_resource type="PackedScene" uid="uid://c1xhvexpi512s" path="res://scenes/ui/death_menu/death_menu.tscn" id="8_3sgk5"]
 [ext_resource type="Script" uid="uid://cr2754hyh6i2u" path="res://scenes/game_controller/pause_manager.gd" id="8_mras5"]
+[ext_resource type="PackedScene" uid="uid://dehxny3j7cygs" path="res://scenes/ui/start_menu/start_menu.tscn" id="9_dv3no"]
 
 [node name="GameController" type="Node"]
 process_mode = 3
@@ -34,6 +35,8 @@ script = ExtResource("6_c4mfo")
 
 [node name="Death Menu" parent="UiManager" instance=ExtResource("8_3sgk5")]
 visible = false
+
+[node name="Start Menu" parent="UiManager" instance=ExtResource("9_dv3no")]
 
 [node name="PauseManager" type="Node" parent="."]
 script = ExtResource("8_mras5")

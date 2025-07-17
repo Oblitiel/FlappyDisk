@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5qpj1qshjts6"
-path="res://.godot/imported/FlappyDisk.png-de030ad3d1f23dd797ae3e24023c7962.ctex"
+uid="uid://cd8ogybb0l661"
+path="res://.godot/imported/BgExp.png-a6a0f05046a7f4ad338cd1806500a601.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FlappyDisk.png"
-dest_files=["res://.godot/imported/FlappyDisk.png-de030ad3d1f23dd797ae3e24023c7962.ctex"]
+source_file="res://resources/textures/BgExp.png"
+dest_files=["res://.godot/imported/BgExp.png-a6a0f05046a7f4ad338cd1806500a601.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cic7i7x8bsqd4"]
 
 [ext_resource type="Script" uid="uid://n6857vhxvypy" path="res://scenes/flappy_disk/flappy_disk.gd" id="1_y1v7f"]
-[ext_resource type="Texture2D" uid="uid://b5qpj1qshjts6" path="res://assets/FlappyDisk.png" id="2_b7fpd"]
+[ext_resource type="Texture2D" uid="uid://b5qpj1qshjts6" path="res://resources/textures/FlappyDisk.png" id="2_b7fpd"]
 [ext_resource type="Script" uid="uid://cd5e1vabmu2aa" path="res://scenes/flappy_disk/movement.gd" id="4_b7fpd"]
 [ext_resource type="Script" uid="uid://b42oq4kc5plsm" path="res://scenes/flappy_disk/input_handler.gd" id="4_e1voq"]
 

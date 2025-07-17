@@ -19,7 +19,7 @@ func _on_exit_pressed() -> void:
 func show_death_menu() -> void:
 	show()
 	update_message()
-	$VBoxContainer/HBoxContainer/Reset.grab_focus()
+	#$VBoxContainer/HBoxContainer/Reset.grab_focus()
 
 func hide_death_menu() -> void:
 	hide()

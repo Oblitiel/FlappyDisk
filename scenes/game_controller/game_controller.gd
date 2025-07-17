@@ -12,6 +12,9 @@ static var instance : GameController
 func _init():
 	instance = self
 
+func _ready() -> void:
+	pause_game()
+
 func change_level(new_level: String, delete: bool = true, keep_running : bool = false):
 	_level_manager.change_level(new_level, delete, keep_running)
 
