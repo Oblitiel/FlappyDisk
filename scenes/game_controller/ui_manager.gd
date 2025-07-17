@@ -13,9 +13,7 @@ func get_score() -> int:
 	return score_ui.score
 
 func show_death_menu() -> void:
-	death_menu.show()
-	print(get_score())
-	death_menu.update_message()
+	death_menu.show_death_menu()
 
 func hide_death_menu() -> void:
-	death_menu.hide()
+	death_menu.hide_death_menu()

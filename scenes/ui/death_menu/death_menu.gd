@@ -13,6 +13,13 @@ func update_message() -> void:
 func _on_reset_pressed() -> void:
 	GameController.instance.reset_game()
 
-
 func _on_exit_pressed() -> void:
 	GameController.instance.exit_game()
+
+func show_death_menu() -> void:
+	show()
+	update_message()
+	$VBoxContainer/HBoxContainer/Reset.grab_focus()
+
+func hide_death_menu() -> void:
+	hide()

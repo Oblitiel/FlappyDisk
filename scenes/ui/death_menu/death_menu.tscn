@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1xhvexpi512s"]
+[gd_scene load_steps=8 format=3 uid="uid://c1xhvexpi512s"]
 
 [ext_resource type="Script" uid="uid://bindnygi8rhg" path="res://scenes/ui/death_menu/death_menu.gd" id="1_uqrr2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqrr2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumx3"]
 bg_color = Color(0.102975, 0.411747, 0.134184, 1)
@@ -27,6 +30,7 @@ corner_radius_bottom_left = 8
 [sub_resource type="Theme" id="Theme_k5twr"]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 32
+Button/styles/focus = SubResource("StyleBoxFlat_uqrr2")
 Button/styles/hover = SubResource("StyleBoxFlat_lumx3")
 Button/styles/normal = SubResource("StyleBoxFlat_k5twr")
 Button/styles/pressed = SubResource("StyleBoxFlat_37fck")
