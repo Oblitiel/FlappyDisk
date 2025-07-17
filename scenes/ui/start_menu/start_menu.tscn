@@ -1,8 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://dehxny3j7cygs"]
+[gd_scene load_steps=10 format=3 uid="uid://dehxny3j7cygs"]
 
 [ext_resource type="Theme" uid="uid://ceho1oxfb5nmd" path="res://resources/themes/main_menu.tres" id="1_15nje"]
 [ext_resource type="Script" uid="uid://y4h76e2e3eqp" path="res://scenes/ui/start_menu/start_menu.gd" id="2_bsebn"]
 [ext_resource type="Texture2D" uid="uid://cknf6ss8iwtxb" path="res://resources/textures/BackGround.png" id="3_kpeds"]
+
+[sub_resource type="Animation" id="Animation_3074c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_kpeds"]
 resource_name = "loop_bg"
@@ -21,25 +36,48 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(-56, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_3074c"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3r5r3"]
+_data = {
+&"RESET": SubResource("Animation_3074c"),
+&"loop_bg": SubResource("Animation_kpeds")
+}
+
+[sub_resource type="Animation" id="Animation_8pf73"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
+tracks/0/path = NodePath("TextureRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Color(0.411747, 0.0758963, 0.350654, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3r5r3"]
+[sub_resource type="Animation" id="Animation_3r5r3"]
+resource_name = "color_bg"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.411747, 0.0758963, 0.350654, 1), Color(0.411747, 0.0758963, 0.0758963, 1), Color(0.0758963, 0.411747, 0.102518, 1), Color(0.0758963, 0.285639, 0.411747, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1ao5"]
 _data = {
-&"RESET": SubResource("Animation_3074c"),
-&"loop_bg": SubResource("Animation_kpeds")
+&"RESET": SubResource("Animation_8pf73"),
+&"color_bg": SubResource("Animation_3r5r3")
 }
 
 [node name="Start Menu" type="Control"]
@@ -53,8 +91,10 @@ theme = ExtResource("1_15nje")
 script = ExtResource("2_bsebn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.411747, 0.0758963, 0.350654, 1)
 layout_mode = 0
-offset_right = 380.0
+offset_left = -30.4529
+offset_right = 349.547
 offset_bottom = 186.0
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("3_kpeds")
@@ -94,6 +134,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_3r5r3")
 }
 autoplay = "loop_bg"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t1ao5")
+}
+autoplay = "color_bg"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
