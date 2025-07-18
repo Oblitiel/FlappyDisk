@@ -10,14 +10,20 @@ config_version=5
 
 [application]
 
-config/name="FlappyDisk"
+config/name="Flappy Disk"
+config/description="Flappy Disk is a training proyecto to practice game development."
+config/version="1.0"
 run/main_scene="uid://c5r12eiuicmwe"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://dfvkxicyr30j4"
+config/icon="uid://b5qpj1qshjts6"
 
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://c5nwqubsxcx5d"
 
 [global_group]
 
@@ -47,3 +53,4 @@ jump={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
