@@ -12,3 +12,4 @@ func _connect_body_entered_from_area2d() -> void:
 func _on_body_entered(body : Node2D) -> void:
 	if body is FlappyCharacter:
 		player_obstacle_collision.emit()
+		GameController.instance.player_obstacle_collision()
