@@ -2,12 +2,12 @@ class_name GameController
 extends Node
 
 static var instance : GameController
+static var non_exit_os : Array[String] = ["Web", "Android", "iOS"]
 
 @onready var _level_manager: Node2D = $Pausable/LevelManager
 @onready var _player_character_manager: Node2D = $Pausable/PlayerCharacterManager
 @onready var _ui_manager = $UiManager
 @onready var pause_manager: Node = $PauseManager
-
 
 func _init():
 	instance = self
